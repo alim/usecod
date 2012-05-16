@@ -710,24 +710,26 @@ function template_preprocess_cod_session_schedule(&$vars) {
   // it is.
   $empty_rooms = $show_rooms = array();
   foreach ($room_nids as $room_nid) {
-    foreach ($days_slots as $day_key => $day_slots) {
-      $intersect = array();
-      if (!empty($used_rooms[$room_nid])) {
-        $intersect = array_intersect($used_rooms[$room_nid], $day_slots);
-      }
-      if (empty($intersect)) {
-        // Room not used on this day.
-        $empty_rooms[$day_key][$room_nid] = TRUE;
-        if ($view->cod_schedule_interactive) {
-          $show_rooms[$day_key][$room_nid] = TRUE;
+    if( isset($days_slots) && !empty($days_slots) ) {
+      foreach ($days_slots as $day_key => $day_slots) {
+        $intersect = array();
+        if (!empty($used_rooms[$room_nid])) {
+          $intersect = array_intersect($used_rooms[$room_nid], $day_slots);
+        }
+        if (empty($intersect)) {
+          // Room not used on this day.
+          $empty_rooms[$day_key][$room_nid] = TRUE;
+          if ($view->cod_schedule_interactive) {
+            $show_rooms[$day_key][$room_nid] = TRUE;
+          }
+          else {
+            $show_rooms[$day_key][$room_nid] = FALSE;
+          }
         }
         else {
-          $show_rooms[$day_key][$room_nid] = FALSE;
+          // Room is in use, so show it.
+          $show_rooms[$day_key][$room_nid] = TRUE;
         }
-      }
-      else {
-        // Room is in use, so show it.
-        $show_rooms[$day_key][$room_nid] = TRUE;
       }
     }
   }
@@ -737,106 +739,108 @@ function template_preprocess_cod_session_schedule(&$vars) {
   // to the tpl file.
   $schedule_grid = array();
   // For each day...
-  foreach ($days as $day_key => $day_title) {
-    $schedule_grid[$day_key] = array();
-    // For each slot...
-    foreach ($arranged_slots[$day_key] as $slot_key => $slot) {
-      $schedule_grid[$day_key][$slot['nid']] = array();
-      // For each room. $room_key is used for determing colspans.
-      foreach ($room_nids as $room_key => $room_nid) {
-        // Leave out empty rooms on non-interactive schedules.
-        if (!$view->cod_schedule_interactive && $empty_rooms[$day_key][$room_nid]) {
-          continue;
-        }
-        // Collect sessions and availability and call-to-schedule information.
-        // The tpl file determines what to print. @todo make that determination here?
+  if( isset($days) && !empty($days) ) {
+    foreach ($days as $day_key => $day_title) {
+      $schedule_grid[$day_key] = array();
+      // For each slot...
+      foreach ($arranged_slots[$day_key] as $slot_key => $slot) {
+        $schedule_grid[$day_key][$slot['nid']] = array();
+        // For each room. $room_key is used for determing colspans.
+        foreach ($room_nids as $room_key => $room_nid) {
+          // Leave out empty rooms on non-interactive schedules.
+          if (!$view->cod_schedule_interactive && $empty_rooms[$day_key][$room_nid]) {
+            continue;
+          }
+          // Collect sessions and availability and call-to-schedule information.
+          // The tpl file determines what to print. @todo make that determination here?
 
-        // Now at the level of depth of session_grid, that is [slot][room].
-        $schedule_grid[$day_key][$slot['nid']][$room_nid]['sessions'] = array();
-        $schedule_grid[$day_key][$slot['nid']][$room_nid]['class'] = '';
+          // Now at the level of depth of session_grid, that is [slot][room].
+          $schedule_grid[$day_key][$slot['nid']][$room_nid]['sessions'] = array();
+          $schedule_grid[$day_key][$slot['nid']][$room_nid]['class'] = '';
 
-        $available = $rooms[$room_nid]['capacity'];
-        // Check $item_grid for if items exists in this slot.
-        if (!empty($item_grid[$slot['nid']][$room_nid])) {
-          $colspan = 1;
-          // Record the session(s) in this room and slot.
-          // $item_grid[slot][room] is an array of sessions. Store sessions
-          // in $schedule_grid at [day][slot][room]['sessions'].
-          $schedule_grid[$day_key][$slot['nid']][$room_nid]['sessions'] = $item_grid[$slot['nid']][$room_nid];
-          // Count scheduled items.
-          $available = $available - count($item_grid[$slot['nid']][$room_nid]);
-          // Check for single item, to set uniqueness and colspan.
-          if (count($item_grid[$slot['nid']][$room_nid]) == 1) {
-            $this_session = current($item_grid[$slot['nid']][$room_nid]);
-            // Exclusive content types override non-exclusive.
-            $this_exclusive = variable_get('cod_unique_' . $this_session['session']->type, COD_SCHEDULE_SINGLE);
-            if ($this_exclusive == COD_SCHEDULE_SINGLE) {
-              $available = 0;
-            }
+          $available = $rooms[$room_nid]['capacity'];
+          // Check $item_grid for if items exists in this slot.
+          if (!empty($item_grid[$slot['nid']][$room_nid])) {
+            $colspan = 1;
+            // Record the session(s) in this room and slot.
+            // $item_grid[slot][room] is an array of sessions. Store sessions
+            // in $schedule_grid at [day][slot][room]['sessions'].
+            $schedule_grid[$day_key][$slot['nid']][$room_nid]['sessions'] = $item_grid[$slot['nid']][$room_nid];
+            // Count scheduled items.
+            $available = $available - count($item_grid[$slot['nid']][$room_nid]);
+            // Check for single item, to set uniqueness and colspan.
+            if (count($item_grid[$slot['nid']][$room_nid]) == 1) {
+              $this_session = current($item_grid[$slot['nid']][$room_nid]);
+              // Exclusive content types override non-exclusive.
+              $this_exclusive = variable_get('cod_unique_' . $this_session['session']->type, COD_SCHEDULE_SINGLE);
+              if ($this_exclusive == COD_SCHEDULE_SINGLE) {
+                $available = 0;
+              }
 
-            // This slot has only one session, calculate colspans in time slot (row).
-            // @todo consider if session is in this and not next sequential room?
-            // Check for sessions in remaining rooms.
-            for ($i = $room_key + 1; $i < count($room_nids); $i++) {
-              if (!empty($item_grid[$slot['nid']][$room_nids[$i]]) && count($item_grid[$slot['nid']][$room_nids[$i]]) == 1) {
-                $adjacent = current($item_grid[$slot['nid']][$room_nids[$i]]);
-                // Check to see if adjacent column matches.
-                if ($this_session['session']->nid == $adjacent['session']->nid) {
-                  // We'll accommodate for this in the markup.
-                  $colspan++;
-                  $schedule_grid[$day_key][$slot['nid']][$room_nids[$i]]['spanned'] = TRUE;
-                  // Don't process adjacent room when setting schedule grid.
-                  unset($item_grid[$slot['nid']][$room_nids[$i]]);
+              // This slot has only one session, calculate colspans in time slot (row).
+              // @todo consider if session is in this and not next sequential room?
+              // Check for sessions in remaining rooms.
+              for ($i = $room_key + 1; $i < count($room_nids); $i++) {
+                if (!empty($item_grid[$slot['nid']][$room_nids[$i]]) && count($item_grid[$slot['nid']][$room_nids[$i]]) == 1) {
+                  $adjacent = current($item_grid[$slot['nid']][$room_nids[$i]]);
+                  // Check to see if adjacent column matches.
+                  if ($this_session['session']->nid == $adjacent['session']->nid) {
+                    // We'll accommodate for this in the markup.
+                    $colspan++;
+                    $schedule_grid[$day_key][$slot['nid']][$room_nids[$i]]['spanned'] = TRUE;
+                    // Don't process adjacent room when setting schedule grid.
+                    unset($item_grid[$slot['nid']][$room_nids[$i]]);
+                  }
+                  else {
+                    // Adjacent session does not match.
+                    break;
+                  }
                 }
                 else {
-                  // Adjacent session does not match.
+                  // Only consider those which are adjacent.
                   break;
                 }
               }
-              else {
-                // Only consider those which are adjacent.
-                break;
-              }
             }
+            // Set colspan.
+            $schedule_grid[$day_key][$slot['nid']][$room_nid]['colspan'] = $colspan;
           }
-          // Set colspan.
-          $schedule_grid[$day_key][$slot['nid']][$room_nid]['colspan'] = $colspan;
-        }
 
-        // Include room availability and call-to-action if this is an interactive 
-        // schedule and user is allowed to create and schedule.
-        if ($view->cod_schedule_interactive && cod_session_schedule_access($view->cod_interactive_type, $user)) {
-          $type_url_str = str_replace('_', '-', $view->cod_interactive_type); // Oh, Drupal.
-          if ($available <= 0) {
-            $availability = ''; // Do not display anything if the room is full.
-            $schedule_grid[$day_key][$slot['nid']][$room_nid]['class'] .= ' full';
-          }
-          else {
-            $availability = t('@avail of @cap slots available', array('@avail' => $available, '@cap' => $rooms[$room_nid]['capacity']));
-            // There is availability so provide a call-to-action for scheduling.
-            $options = array(
-              'query' => array(
-                // The session room field is unlimited so it would be rendered as
-                // checkboxes but because it's being altered by cod_bof set the
-                // Prepopulate arguments to what it will be, a select list.
-                'edit[field_session_room][nid][nid]' => $room_nid,
-                'edit[field_session_slot][nid][nid]' => $slot['nid'],
-                'destination' => $_GET['q'], // @todo may be menu tab depth?
-              ),
-            );
-            // If the user has unscheduled items or has not submitted any
-            // they are given a link to add and otherwise a link to schedule.
-            if (!$authored || !$unscheduled_bofs) {
-              $cta = l(t('Add a @name', array('@name' => $node_types[$view->cod_interactive_type]['name'])), 'node/add/' . $type_url_str, $options);
+          // Include room availability and call-to-action if this is an interactive
+          // schedule and user is allowed to create and schedule.
+          if ($view->cod_schedule_interactive && cod_session_schedule_access($view->cod_interactive_type, $user)) {
+            $type_url_str = str_replace('_', '-', $view->cod_interactive_type); // Oh, Drupal.
+            if ($available <= 0) {
+              $availability = ''; // Do not display anything if the room is full.
+              $schedule_grid[$day_key][$slot['nid']][$room_nid]['class'] .= ' full';
             }
             else {
-              $cta = l(t('Schedule a @name', array('@name' => $node_types[$view->cod_interactive_type]['name'])), 'scheduler-form/' . $view->cod_interactive_type, $options);
+              $availability = t('@avail of @cap slots available', array('@avail' => $available, '@cap' => $rooms[$room_nid]['capacity']));
+              // There is availability so provide a call-to-action for scheduling.
+              $options = array(
+                'query' => array(
+                  // The session room field is unlimited so it would be rendered as
+                  // checkboxes but because it's being altered by cod_bof set the
+                  // Prepopulate arguments to what it will be, a select list.
+                  'edit[field_session_room][nid][nid]' => $room_nid,
+                  'edit[field_session_slot][nid][nid]' => $slot['nid'],
+                  'destination' => $_GET['q'], // @todo may be menu tab depth?
+                ),
+              );
+              // If the user has unscheduled items or has not submitted any
+              // they are given a link to add and otherwise a link to schedule.
+              if (!$authored || !$unscheduled_bofs) {
+                $cta = l(t('Add a @name', array('@name' => $node_types[$view->cod_interactive_type]['name'])), 'node/add/' . $type_url_str, $options);
+              }
+              else {
+                $cta = l(t('Schedule a @name', array('@name' => $node_types[$view->cod_interactive_type]['name'])), 'scheduler-form/' . $view->cod_interactive_type, $options);
+              }
+              $schedule_grid[$day_key][$slot['nid']][$room_nid]['cta'] = $cta;
+              $schedule_grid[$day_key][$slot['nid']][$room_nid]['class'] .= ' available';
             }
-            $schedule_grid[$day_key][$slot['nid']][$room_nid]['cta'] = $cta;
-            $schedule_grid[$day_key][$slot['nid']][$room_nid]['class'] .= ' available';
+            // Include availability message.
+            $schedule_grid[$day_key][$slot['nid']][$room_nid]['availability'] = $availability;
           }
-          // Include availability message.
-          $schedule_grid[$day_key][$slot['nid']][$room_nid]['availability'] = $availability;
         }
       }
     }
