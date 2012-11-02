@@ -1,0 +1,1613 @@
+commit 9a53393
+Author: hutch <hutch@midwales.net>
+Date:   Fri Oct 7 15:29:40 2011 +0100
+
+    fixed image size bug #1302434
+
+imagepicker.theme.inc
+imagepicker_iframe.js
+
+commit af475a0
+Author: hutch <hutch@midwales.net>
+Date:   Wed Sep 28 16:40:40 2011 +0100
+
+    coder review cleanup
+
+imagepicker.edit.inc
+imagepicker.functions.inc
+imagepicker.upload.inc
+
+commit e7ead5a
+Author: hutch <hutch@midwales.net>
+Date:   Wed Sep 28 11:40:45 2011 +0100
+
+    added linkbox feature
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.functions.inc
+imagepicker.theme.inc
+imagepicker_iframe.js
+
+commit 9361e5a
+Author: hutch <hutch@midwales.net>
+Date:   Mon Sep 12 23:13:59 2011 +0100
+
+    fixed groups bugs in iframe
+
+imagepicker.functions.inc
+
+commit 276cc8c
+Author: hutch <hutch@midwales.net>
+Date:   Thu Aug 18 10:11:56 2011 +0100
+
+    fixed description validation, added check_plain
+
+CHANGELOG.txt
+imagepicker.edit.inc
+imagepicker.functions.inc
+imagepicker.upload.inc
+
+commit cd225d8
+Author: hutch <hutch@midwales.net>
+Date:   Sat Jul 30 08:54:37 2011 +0100
+
+    added some notice avoidance
+
+imagepicker.upload.inc
+
+commit d116fbe
+Author: hutch <hutch@midwales.net>
+Date:   Fri Jul 22 20:36:32 2011 +0100
+
+    added image title option
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.form-elements.inc
+imagepicker.theme.inc
+imagepicker.user.inc
+imagepicker_iframe.js
+
+commit 1edafa7
+Author: hutch <hutch@midwales.net>
+Date:   Thu Jul 21 12:59:35 2011 +0100
+
+    added width and height to insert
+
+imagepicker.theme.inc
+imagepicker_iframe.js
+
+commit 4e447af
+Author: hutch <hutch@midwales.net>
+Date:   Thu Jul 21 11:03:44 2011 +0100
+
+    changed function names containing '_process'
+
+CHANGELOG.txt
+contribs/imagepicker_postlet/imagepicker_postlet.module
+imagepicker.edit.inc
+imagepicker.functions.inc
+imagepicker.imagefuncs.inc
+imagepicker.import.inc
+imagepicker.upload.inc
+
+commit 708b493
+Author: hutch <hutch@midwales.net>
+Date:   Fri Jun 17 09:05:18 2011 +0100
+
+    added defaults for imagecache
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.functions.inc
+
+commit 5b29aa5
+Author: hutch <hutch@midwales.net>
+Date:   Mon Jun 13 18:46:48 2011 +0100
+
+    added JPEG quality to upload form and user config interface, Coder review cleanup
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.group.inc
+imagepicker.imagefuncs.inc
+imagepicker.module
+imagepicker.upload.inc
+imagepicker.user.inc
+
+commit 05f0256
+Author: hutch <hutch@midwales.net>
+Date:   Sun Jun 12 17:35:53 2011 +0100
+
+    fixed jpeg quality bug, #1036216
+
+CHANGELOG.txt
+imagepicker.imagefuncs.inc
+
+commit aaf1b22
+Author: hutch <hutch@midwales.net>
+Date:   Sat Jun 11 15:41:18 2011 +0100
+
+    fixed currentgroup bug #1185406
+
+CHANGELOG.txt
+imagepicker.functions.inc
+imagepicker.group.inc
+
+commit 91ab7ae
+Author: hutch <hutch@midwales.net>
+Date:   Wed Jun 8 09:15:01 2011 +0100
+
+    added rel for colorbox support
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.functions.inc
+imagepicker.theme.inc
+imagepicker_iframe.js
+
+commit d0da62a
+Author: hutch <hutch@midwales.net>
+Date:   Mon Jun 6 22:12:38 2011 +0100
+
+    added imagecache support
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.functions.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker_iframe.js
+
+commit 7de5075
+Author: hutch <hutch@midwales.net>
+Date:   Fri Jun 3 08:19:29 2011 +0100
+
+    added reallocate feature
+
+CHANGELOG.txt
+contribs/imagepicker_postlet/imagepicker_postlet.module
+imagepicker.admin.inc
+imagepicker.functions.inc
+imagepicker.module
+imagepicker.theme.inc
+
+commit 351da6d
+Author: hutch <hutch@midwales.net>
+Date:   Fri Apr 22 16:09:59 2011 +0100
+
+    added insert template
+
+CHANGELOG.txt
+imagepicker.functions.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker_iframe.js
+imagepicker_insert_template.txt.example
+readme.txt
+
+commit c39ce37
+Author: hutch <hutch@midwales.net>
+Date:   Thu Mar 31 11:43:04 2011 +0100
+
+    cleanup for new release
+
+CHANGELOG.txt
+imagepicker.admin.inc
+
+commit cc917ba
+Author: hutch <hutch@midwales.net>
+Date:   Sun Mar 27 23:16:08 2011 +0100
+
+    revoked arg() removal
+
+imagepicker.admin.inc
+imagepicker.functions.inc
+imagepicker.module
+
+commit eaabc4c
+Author: hutch <hutch@midwales.net>
+Date:   Sun Mar 27 12:46:05 2011 +0100
+
+    removed all arg(), fixed bug in public_roles, fixed bug in iframe js for tinymce
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.functions.inc
+imagepicker.group.inc
+imagepicker.module
+imagepicker_iframe.js
+
+commit aead0dc
+Author: hutch <hutch@midwales.net>
+Date:   Thu Mar 17 23:22:51 2011 +0000
+
+    added multiple uploads
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.theme.inc
+imagepicker.upload.inc
+imagepicker_upload_link.js
+
+commit 6e0a970
+Author: hutch <hutch@midwales.net>
+Date:   Mon Mar 14 17:15:39 2011 +0000
+
+    fixed wysiwyg bug in iframe js
+
+imagepicker_iframe.js
+
+commit 12fda54
+Author: hutch <hutch@midwales.net>
+Date:   Sun Mar 6 12:13:13 2011 +0000
+
+    moved some functions back to imagepicker.module
+
+CHANGELOG.txt
+imagepicker.functions.inc
+imagepicker.install
+imagepicker.module
+
+commit 1548337
+Author: hutch <hutch@midwales.net>
+Date:   Fri Mar 4 17:53:56 2011 +0000
+
+    fixed pathing with private uploads
+
+CHANGELOG.txt
+imagepicker.functions.inc
+imagepicker.install
+imagepicker.module
+
+commit 8e7c968
+Author: hutch <hutch@midwales.net>
+Date:   Thu Mar 3 14:17:09 2011 +0000
+
+    added private download support  #1079540 patch by klflote
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.functions.inc
+imagepicker.info
+imagepicker.install
+imagepicker.module
+imagepicker.tpl.php
+readme.txt
+
+commit 8137d07
+Author: hutch <hutch@midwales.net>
+Date:   Thu Mar 3 14:03:23 2011 +0000
+
+    fixed bug in exifinfo function
+
+imagepicker.functions.inc
+
+commit 8fa3e69
+Author: hutch <hutch@midwales.net>
+Date:   Sun Feb 27 15:08:10 2011 +0000
+
+    by hutch, changed InsertatCursor to imagepickerInsertatCursor in imagepicker_iframe.js
+
+CHANGELOG.txt
+contribs/imagepicker_postlet/README.txt
+contribs/imagepicker_postlet/imagepicker_postlet.install
+contribs/imagepicker_postlet/imagepicker_postlet.module
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.edit.inc
+imagepicker.form-elements.inc
+imagepicker.functions.inc
+imagepicker.group.inc
+imagepicker.imagefuncs.inc
+imagepicker.import.inc
+imagepicker.install
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.tpl.php
+imagepicker.upload.inc
+imagepicker.user.inc
+imagepicker_iframe.js
+
+commit ff208a4
+Author: The Great Git Migration <tggm@no-reply.drupal.org>
+Date:   Fri Feb 25 02:08:12 2011 +0000
+
+    Removing translation directories
+
+translations/imagepicker-module.pot
+
+commit c92aa0d
+Author: The Great Git Migration <tggm@no-reply.drupal.org>
+Date:   Fri Feb 25 02:08:12 2011 +0000
+
+    Stripping CVS keywords
+
+CHANGELOG.txt
+contribs/convert_name2uid.php
+contribs/imagepicker_postlet/imagepicker_postlet.info
+contribs/imagepicker_postlet/imagepicker_postlet.install
+contribs/imagepicker_postlet/imagepicker_postlet.js
+contribs/imagepicker_postlet/imagepicker_postlet.module
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.edit.inc
+imagepicker.form-elements.inc
+imagepicker.functions.inc
+imagepicker.group.inc
+imagepicker.imagefuncs.inc
+imagepicker.import.inc
+imagepicker.info
+imagepicker.install
+imagepicker.js
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.tpl.php
+imagepicker.upload.inc
+imagepicker.user.inc
+imagepicker_iframe.js
+imagepicker_upload.js
+translations/imagepicker-module.pot
+
+commit 03df18d
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Feb 17 13:45:28 2011 +0000
+
+    reorganised functions for reduced footprint
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.functions.inc
+imagepicker.js
+imagepicker.module
+imagepicker.theme.inc
+
+commit e8cb534
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Jan 29 08:52:48 2011 +0000
+
+    improved gallery blocks
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.module
+
+commit 628e198
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Jan 26 15:02:02 2011 +0000
+
+    added gallery blocks
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.group.inc
+imagepicker.import.inc
+imagepicker.js
+imagepicker.module
+imagepicker.theme.inc
+
+commit 8b35154
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Mon Jan 24 16:51:35 2011 +0000
+
+    by hutch, fixed jpeg quality issue #1036216, fixed rows per page bug #1038288
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.group.inc
+imagepicker.imagefuncs.inc
+
+commit 5ac42cd
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Jan 8 22:10:32 2011 +0000
+
+    more import fixes
+
+imagepicker.admin.inc
+imagepicker.import.inc
+
+commit 631e4b8
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Jan 6 11:33:36 2011 +0000
+
+    fixed group by bug, #1015874
+
+imagepicker.group.inc
+imagepicker.import.inc
+
+commit a40cc85
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Dec 21 23:34:44 2010 +0000
+
+    added PECL uploadprogress support
+
+imagepicker.admin.inc
+
+commit 87681ee
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Dec 21 21:59:57 2010 +0000
+
+    added PECL uploadprogress support
+
+imagepicker.module
+imagepicker.upload.inc
+imagepicker_upload.js
+
+commit 21a4d2a
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Dec 21 16:25:20 2010 +0000
+
+    added PECL uploadprogress support
+
+imagepicker.module
+
+commit d263a21
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Dec 21 14:40:15 2010 +0000
+
+    added PECL uploadprogress support
+
+imagepicker.module
+
+commit 82c4333
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Dec 21 13:45:48 2010 +0000
+
+    added PECL uploadprogress support
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.js
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.upload.inc
+imagepicker_upload.js
+
+commit a59ff80
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Mon Dec 13 20:18:27 2010 +0000
+
+    cleaned js and themeing
+
+CHANGELOG.txt
+imagepicker.js
+imagepicker.theme.inc
+
+commit 6e9db3b
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Dec 12 18:17:47 2010 +0000
+
+    fixed upload_progress
+
+imagepicker.js
+imagepicker.module
+imagepicker.theme.inc
+
+commit 3ea17c2
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Mon Nov 8 12:45:31 2010 +0000
+
+    changed img_date field to int, added date format to config
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.edit.inc
+imagepicker.install
+imagepicker.module
+translations/imagepicker-module.pot
+
+commit c48199e
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Nov 7 14:10:21 2010 +0000
+
+    fixed hook_form_alter reference bug and incompatibility with filepicker
+
+CHANGELOG.txt
+imagepicker.module
+
+commit 941a075
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Oct 9 22:37:53 2010 +0000
+
+    improved theming in browse and list, fixed sql count in group table
+
+CHANGELOG.txt
+imagepicker.group.inc
+imagepicker.module
+imagepicker.theme.inc
+
+commit e230cd1
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Oct 6 12:12:35 2010 +0000
+
+    added groups to Bulk Operations
+
+imagepicker.module
+imagepicker.theme.inc
+translations/imagepicker-module.pot
+
+commit 02b4429
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Oct 6 12:03:49 2010 +0000
+
+    added groups to Bulk Operations
+
+CHANGELOG.txt
+contribs/imagepicker_postlet/imagepicker_postlet.module
+imagepicker.admin.inc
+imagepicker.edit.inc
+imagepicker.group.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.upload.inc
+
+commit 5ca32ab
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Sep 23 20:21:00 2010 +0000
+
+    added Bulk Operations to image list
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.module
+imagepicker.theme.inc
+
+commit 0e26971
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Sep 17 23:26:49 2010 +0000
+
+    added IMAGEPICKER_PATH constant
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.group.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.upload.inc
+imagepicker.user.inc
+
+commit 5a1466c
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Sep 8 10:56:16 2010 +0000
+
+    improved iframe integration
+
+CHANGELOG.txt
+contribs/imagepicker_postlet/imagepicker_postlet.module
+imagepicker-page.tpl.php
+imagepicker.edit.inc
+imagepicker.form-elements.inc
+imagepicker.group.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.tpl.php
+imagepicker.upload.inc
+
+commit dd34da9
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Mon Aug 23 19:25:12 2010 +0000
+
+    improved wysiwyg support
+
+CHANGELOG.txt
+imagepicker.theme.inc
+imagepicker_iframe.js
+
+commit d066abd
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Aug 17 19:35:05 2010 +0000
+
+    updated translations file
+
+translations/imagepicker-module.pot
+
+commit 8d40f29
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Aug 10 21:04:19 2010 +0000
+
+    added js to public groups form
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.group.inc
+imagepicker.js
+imagepicker.user.inc
+
+commit b2a1f06
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Aug 10 20:31:46 2010 +0000
+
+    fixed public groups bug #873094
+
+CHANGELOG.txt
+imagepicker.theme.inc
+
+commit aa1c268
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Mon Aug 2 11:06:43 2010 +0000
+
+     fixed groups paging, improved theming, added config for table paging.
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.edit.inc
+imagepicker.form-elements.inc
+imagepicker.group.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.user.inc
+
+commit 2d962c4
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Jul 10 09:03:42 2010 +0000
+
+    added menu access callback functions
+
+CHANGELOG.txt
+imagepicker.module
+
+commit cfd0770
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Mon Jun 14 18:25:51 2010 +0000
+
+    replaced include_once with module_load_include
+
+CHANGELOG.txt
+contribs/imagepicker_postlet/imagepicker_postlet.module
+imagepicker.admin.inc
+imagepicker.import.inc
+imagepicker.module
+imagepicker.upload.inc
+imagepicker.user.inc
+
+commit b7c5897
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Jun 9 11:01:59 2010 +0000
+
+    added class imgp_img to inserted image, replaced split() with explode()
+
+CHANGELOG.txt
+imagepicker.css
+imagepicker.form-elements.inc
+imagepicker.theme.inc
+imagepicker_iframe.js
+
+commit 7bca812
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat May 15 18:30:29 2010 +0000
+
+     added public select box, changed hidden formfields to 'value'
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.edit.inc
+imagepicker.group.inc
+imagepicker.import.inc
+imagepicker.module
+imagepicker.upload.inc
+imagepicker.user.inc
+translations/imagepicker-module.pot
+
+commit 9e597f4
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri May 14 11:15:16 2010 +0000
+
+    added external hook 'imagepicker_upload_extra'
+
+CHANGELOG.txt
+imagepicker.upload.inc
+readme.txt
+
+commit 9b02b2c
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu May 13 09:56:07 2010 +0000
+
+    fixed issues in #796524, #797612, added icons to admin/groups
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.edit.inc
+imagepicker.module
+
+commit 3b76a83
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue May 11 09:47:18 2010 +0000
+
+    added suggested improvement, issue #795346
+
+CHANGELOG.txt
+imagepicker-page.tpl.php
+imagepicker.css
+
+commit 6f21d47
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Apr 28 16:12:59 2010 +0000
+
+    fixed the default state for the various lightboxes
+
+imagepicker.admin.inc
+imagepicker.theme.inc
+
+commit f740780
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Apr 28 15:08:55 2010 +0000
+
+    added support for Colorbox iframe
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.form-elements.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.user.inc
+
+commit 478482c
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Apr 24 15:49:22 2010 +0000
+
+    added support for Colorbox module
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.form-elements.inc
+imagepicker.theme.inc
+imagepicker_iframe.js
+translations/imagepicker-module.pot
+
+commit e018c7d
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Feb 25 15:15:04 2010 +0000
+
+    Drupal.behaviors applied to js
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.js
+
+commit 13def1c
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Feb 17 18:43:57 2010 +0000
+
+    fixed bug in admin watermarks validation
+
+CHANGELOG.txt
+imagepicker.admin.inc
+
+commit 031a04a
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Feb 13 15:38:40 2010 +0000
+
+    added icons
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.group.inc
+imagepicker.module
+imagepicker.upload.inc
+images/delete.png
+images/edit.png
+
+commit 0668e66
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Jan 17 18:17:21 2010 +0000
+
+    E_NOTICE fixes
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.edit.inc
+imagepicker.group.inc
+imagepicker.import.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.upload.inc
+imagepicker.user.inc
+translations/imagepicker-module.pot
+
+commit a61034f
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Jan 16 18:42:37 2010 +0000
+
+    fixed admin menu suppress on iframe, ckeditor insert code added
+
+CHANGELOG.txt
+imagepicker.theme.inc
+
+commit c5f7a60
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Jan 15 22:00:32 2010 +0000
+
+    added ckeditor patch
+
+imagepicker_iframe.js
+
+commit ea04816
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Mon Jan 4 18:39:01 2010 +0000
+
+    added window-parent to insert js, Used column to admin user table
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker_iframe.js
+translations/imagepicker-module.pot
+
+commit dc3eb1a
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Dec 11 17:32:36 2009 +0000
+
+    added more user configuration, numerous bugfixes
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.form-elements.inc
+imagepicker.js
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.upload.inc
+imagepicker.user.inc
+translations/imagepicker-module.pot
+
+commit b64ee3c
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Dec 5 23:02:14 2009 +0000
+
+    code tidyup and by-reference bug fixed
+
+imagepicker.admin.inc
+imagepicker.import.inc
+imagepicker.theme.inc
+imagepicker_iframe.js
+readme.txt
+
+commit 3a7b068
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Nov 29 13:52:03 2009 +0000
+
+    fixed error in admin/settings/general path
+
+CHANGELOG.txt
+imagepicker.module
+
+commit 8481e8f
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Nov 26 15:10:43 2009 +0000
+
+    improved js and theming, removed inline js, fixed opera bug
+
+CHANGELOG.txt
+contribs/imagepicker_postlet/imagepicker_postlet.module
+imagepicker.module
+imagepicker.theme.inc
+imagepicker_iframe.js
+translations/imagepicker-module.pot
+
+commit 7daebaa
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Nov 13 14:37:44 2009 +0000
+
+    fixed bug in paging
+
+CHANGELOG.txt
+imagepicker.theme.inc
+
+commit eec281e
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Nov 6 20:58:03 2009 +0000
+
+    fixed css bug in imagepicker_postlet
+
+contribs/imagepicker_postlet/imagepicker_postlet.css
+contribs/imagepicker_postlet/imagepicker_postlet.module
+
+commit 34f40c7
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Nov 6 20:47:43 2009 +0000
+
+    updated imagepicker_postlet README
+
+contribs/imagepicker_postlet/README.txt
+
+commit e1e02ad
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Nov 6 18:59:40 2009 +0000
+
+    added imagepicker_postlet module
+
+CHANGELOG.txt
+contribs/imagepicker_postlet/README.txt
+contribs/imagepicker_postlet/imagepicker_postlet.css
+contribs/imagepicker_postlet/imagepicker_postlet.info
+contribs/imagepicker_postlet/imagepicker_postlet.install
+contribs/imagepicker_postlet/imagepicker_postlet.js
+contribs/imagepicker_postlet/imagepicker_postlet.module
+contribs/imagepicker_postlet/postlet/postlet.jar
+imagepicker.admin.inc
+imagepicker.js
+imagepicker.module
+imagepicker.theme.inc
+
+commit fbe1419
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Oct 11 10:18:53 2009 +0000
+
+    added quota by role
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.js
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.user.inc
+translations/imagepicker-module.pot
+
+commit 6d40dca
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Oct 2 11:21:31 2009 +0000
+
+    simplified no-exif message
+
+imagepicker.module
+
+commit 1e264d4
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Oct 2 08:48:05 2009 +0000
+
+    fixed bug in reporting in imagepicker_image_check_functions()
+
+CHANGELOG.txt
+imagepicker.module
+
+commit ab2195e
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Sep 29 09:40:45 2009 +0000
+
+    prevent exifinfo on gifs
+
+CHANGELOG.txt
+contribs/convert_name2uid.php
+imagepicker.admin.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.user.inc
+
+commit 9f65561
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Sep 26 23:03:49 2009 +0000
+
+    added exif info, fixed noisy no-exif message
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.import.inc
+imagepicker.js
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.upload.inc
+imagepicker.user.inc
+translations/imagepicker-module.pot
+
+commit 5c3c45f
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Sep 23 12:49:13 2009 +0000
+
+    fixed bug in file validation
+
+imagepicker.admin.inc
+
+commit cc1ec7d
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Sep 23 11:54:07 2009 +0000
+
+    added batch import, copy
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.imagefuncs.inc
+imagepicker.import.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.upload.inc
+imagepicker.user.inc
+translations/imagepicker-module.pot
+
+commit cb260c4
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Mon Sep 14 13:34:37 2009 +0000
+
+    #571198 fixed
+
+CHANGELOG.txt
+contribs/thickbox_addhook.patch
+imagepicker.upload.inc
+
+commit e3509b2
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Sep 9 20:58:15 2009 +0000
+
+    added group enable/disable, added to contrib
+
+CHANGELOG.txt
+contribs/README.txt
+contribs/convert_name2uid.php
+imagepicker.admin.inc
+imagepicker.module
+imagepicker.upload.inc
+imagepicker.user.inc
+
+commit ee38d1a
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Sep 1 07:56:28 2009 +0000
+
+    fixed pass by reference bug in imagepicker_settings_form_validate() #564446
+
+imagepicker.admin.inc
+
+commit b6eb946
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Aug 29 10:08:15 2009 +0000
+
+    fixed bug in user config tab
+
+CHANGELOG.txt
+imagepicker.user.inc
+
+commit a2e111f
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Aug 29 09:32:07 2009 +0000
+
+    added indexes to imagepicker_group_images, added field descriptions to install schema
+
+CHANGELOG.txt
+imagepicker.install
+
+commit e233b17
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Aug 5 19:42:28 2009 +0000
+
+    added watermarks, save original and user config page
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.group.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.upload.inc
+imagepicker.user.inc
+translations/imagepicker-module.pot
+
+commit 86cfcd5
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Jul 22 08:17:46 2009 +0000
+
+    added additional css feature
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.module
+translations/imagepicker-module.pot
+
+commit 73937c1
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Jul 17 19:43:22 2009 +0000
+
+    added imagepicker.theme.inc
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.edit.inc
+imagepicker.module
+imagepicker.theme.inc
+imagepicker.upload.inc
+translations/imagepicker-module.pot
+
+commit 31ff2b8
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Jul 16 16:54:50 2009 +0000
+
+    fixed bug in form_alter re block form
+
+CHANGELOG.txt
+imagepicker.module
+
+commit b5b6fe1
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Jul 16 11:45:45 2009 +0000
+
+    added link to groups in admin mode, fixed bug in language in template
+
+CHANGELOG.txt
+imagepicker-page.tpl.php
+imagepicker.admin.inc
+imagepicker.module
+
+commit 0b39dc3
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Jul 9 10:50:55 2009 +0000
+
+    added search to browse and list images, cleaned up noisy messages
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.group.inc
+imagepicker.install
+imagepicker.module
+imagepicker.upload.inc
+translations/imagepicker-module.pot
+
+commit 329c038
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Jul 1 19:59:31 2009 +0000
+
+    fixed incorrect call in thickbox iframe
+
+imagepicker.module
+
+commit 781bedf
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Jul 1 19:39:26 2009 +0000
+
+    removed unwanted file
+
+imagepicker.tpl.php
+
+commit e93afc7
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Jul 1 19:38:19 2009 +0000
+
+    added thickbox integration, added contribs folder, fixed #504914 quota bug, fixed #504872 multiple lines in description, revemped menus and improved theming
+
+CHANGELOG.txt
+contribs/README.txt
+contribs/thickbox_addhook.patch
+imagepicker-page.tpl.php
+imagepicker.admin.inc
+imagepicker.module
+imagepicker_thickbox.js
+translations/imagepicker-module.pot
+
+commit c1db0bd
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Jun 28 10:56:18 2009 +0000
+
+    added display description option
+
+CHANGELOG.txt
+imagepicker.css
+imagepicker.module
+
+commit 86830d9
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Jun 16 20:59:39 2009 +0000
+
+    #358644 fixed, bug in stats display fixed
+
+CHANGELOG.txt
+imagepicker.module
+readme.txt
+
+commit 0c7f3b5
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat May 30 19:39:52 2009 +0000
+
+    updated translations
+
+CHANGELOG.txt
+translations/imagepicker-module.pot
+
+commit 2a1766c
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue May 19 12:00:34 2009 +0000
+
+    fixed bug in imagepicker_form_alter
+
+CHANGELOG.txt
+imagepicker.module
+
+commit 1b86691
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed May 13 20:06:27 2009 +0000
+
+    added support for the wysiwyg module
+    fixed a bug in imagepicker_form_alter
+    fixed a bug in block_settings
+
+CHANGELOG.txt
+imagepicker.module
+readme.txt
+
+commit a143e50
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed May 6 11:57:23 2009 +0000
+
+    fixed a bug in block_settings
+
+imagepicker.module
+
+commit c313e03
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun May 3 11:48:04 2009 +0000
+
+    Added imagepicker to blocks
+
+imagepicker.admin.inc
+imagepicker.group.inc
+imagepicker.module
+translations/imagepicker-module.pot
+
+commit ca21556
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Mon Apr 20 11:38:01 2009 +0000
+
+    added quotas
+
+translations/imagepicker-module.pot
+
+commit 146b3dc
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Mon Apr 20 00:21:25 2009 +0000
+
+    Added quotas
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.module
+imagepicker.upload.inc
+
+commit c2b2dba
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Apr 18 13:15:45 2009 +0000
+
+    fixed support for module fckeditor-6.x-1.3 and added roles
+
+translations/imagepicker-module.pot
+
+commit 9af6339
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Apr 17 22:32:30 2009 +0000
+
+    fixed support for module fckeditor-6.x-1.3
+
+CHANGELOG.txt
+imagepicker.module
+
+commit e9b17cf
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Apr 16 22:45:21 2009 +0000
+
+    added available roles as supplied by vishun to D6
+
+imagepicker.admin.inc
+imagepicker.group.inc
+imagepicker.install
+imagepicker.module
+
+commit 5705af5
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Mar 18 11:15:59 2009 +0000
+
+    added missing imagepicker.js
+
+imagepicker.js
+
+commit 45dc750
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Mar 11 08:59:06 2009 +0000
+
+    removed previous bugfix, already done
+
+imagepicker.module
+
+commit b6711e4
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Mar 11 00:11:51 2009 +0000
+
+    fixed missing delete in admin mode
+
+imagepicker.module
+
+commit 25f7110
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Mar 7 21:19:34 2009 +0000
+
+    committing initial version 2 imagepicker
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.edit.inc
+imagepicker.group.inc
+imagepicker.install
+imagepicker.module
+imagepicker.upload.inc
+readme.txt
+translations/imagepicker-module.pot
+
+commit 4116ccd
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Mar 7 11:02:47 2009 +0000
+
+    fixed missing delete in admin mode
+
+imagepicker.module
+
+commit 9850c46
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Feb 20 12:25:08 2009 +0000
+
+    fixed delete form bug and updated readme.txt
+
+imagepicker.module
+readme.txt
+
+commit 6bcb7a0
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Nov 11 22:27:15 2008 +0000
+
+    added some help to readme.txt
+
+CHANGELOG.txt
+readme.txt
+
+commit 7b7bc80
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Oct 26 11:10:29 2008 +0000
+
+    commiting DRUPAL-6
+
+CHANGELOG.txt
+imagepicker.css
+
+commit 4f17b33
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Oct 25 21:56:11 2008 +0000
+
+    #321162 cleaned up css
+
+CHANGELOG.txt
+imagepicker.css
+
+commit 26f3e0d
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Oct 16 08:49:58 2008 +0000
+
+    added the ability to use imagepicker.tpl.php if found in the default theme directory
+
+CHANGELOG.txt
+imagepicker.module
+
+commit 6b17d8c
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Sep 23 21:22:49 2008 +0000
+
+    fixed path in menu to edit in iframe
+
+CHANGELOG.txt
+imagepicker.module
+
+commit 90e6beb
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Sep 7 17:20:28 2008 +0000
+
+    fixed css in browser
+
+translations/imagepicker-module.pot
+
+commit fdc2ab2
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Sep 7 17:13:30 2008 +0000
+
+    fixed css in browser
+
+imagepicker.css
+imagepicker.module
+
+commit 0916a48
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Sep 7 11:20:42 2008 +0000
+
+    added order select box to browser
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.module
+translations/imagepicker-module.pot
+
+commit ab7f323
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Sep 4 22:55:44 2008 +0000
+
+    added use full url feature
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.module
+
+commit 104980d
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Sep 4 21:15:05 2008 +0000
+
+    fixed translations
+
+imagepicker.module
+translations/imagepicker-module.pot
+
+commit 4e34908
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Sep 2 22:42:59 2008 +0000
+
+    #302210 patch supplied by Joshua Hesketh. improved admin settings and improved the javascript insertion method
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.module
+
+commit 542c5a9
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Thu Aug 28 21:25:20 2008 +0000
+
+    improved menus, added admin mode to image browser, added drupal paging to image browser, added groups
+
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.edit.inc
+imagepicker.group.inc
+imagepicker.install
+imagepicker.module
+imagepicker.tpl.php
+imagepicker.upload.inc
+
+commit 00179d3
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Jul 11 12:11:06 2008 +0000
+
+    #281241 fixed excessive messages on install
+
+CHANGELOG.txt
+imagepicker.install
+
+commit e0138e1
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Jul 1 15:02:55 2008 +0000
+
+    added imagepicker to My Account, added paging to browse images, various menu fixes
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.edit.inc
+imagepicker.module
+imagepicker.upload.inc
+
+commit 50adf04
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Tue Jun 24 13:52:34 2008 +0000
+
+    added support for lightbox2
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.module
+
+commit 4a7ab4b
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Jun 15 20:43:04 2008 +0000
+
+    fixed jscript
+
+imagepicker.module
+
+commit f7f2866
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sun Jun 15 13:46:21 2008 +0000
+
+    fixed bug in install, added alignment options
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.install
+imagepicker.module
+
+commit 9ea47e5
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat Jun 14 11:39:56 2008 +0000
+
+    beta version for Drupal 6
+
+CHANGELOG.txt
+imagepicker.admin.inc
+imagepicker.css
+imagepicker.edit.inc
+imagepicker.info
+imagepicker.install
+imagepicker.module
+imagepicker.tpl.php
+imagepicker.upload.inc
+readme.txt
+
+commit df1c528
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri Jun 6 16:54:07 2008 +0000
+
+    #266621 fixed bug in support for comments
+
+CHANGELOG.txt
+imagepicker.module
+
+commit a74530d
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Wed Jun 4 22:04:12 2008 +0000
+
+    #266621 added support for comments
+
+CHANGELOG.txt
+imagepicker.module
+
+commit 983267b
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Sat May 31 19:04:31 2008 +0000
+
+    brought module up to drupal coding standards
+
+CHANGELOG.txt
+imagepicker.module
+
+commit 872091f
+Author: Bob Hutchinson <hutch@midwales.net>
+Date:   Fri May 30 21:28:36 2008 +0000
+
+    file: imagepicker.install
+    removed htaccess creation, not needed as Options -Indexes is already active in Drupal.
+    replaced all tabs with two spaces to conform with Drupal standards.
+    added success/error checking with relevant messages.
+    added deletion in variable table to uninstall function.
+    
+    file: imagepicker.module
+    replaced all tabs with two spaces to conform with Drupal standards.
+    removed function imagepicker_get_access, now using function imagepicker_perm to control permissions.
+    two new permissions added, 'administer imagepicker'and 'use imagepicker'.
+    added admin settings page for greater control of default settings and the ability to decide which node types can use imagepicker.
+    added more success/error checking with relevant messages, with watchdog messages for more serious errors.
+    added drupal_get_path('module', 'imagepicker') where relevant.
+    added tooltips.
+    added comments throughout.
+    
+    file: imagepicker.tpl.php
+    replaced all tabs with two spaces to conform with Drupal standards.
+    
+    file: .htaccess
+    removed, no longer required
+    
+    added CVS headers to imagepicker.install, imagepicker.module and imagepicker.tpl.php
+    added CHANGELOG.txt
+
+.htaccess
+CHANGELOG.txt
+imagepicker.install
+imagepicker.module
+imagepicker.tpl.php
+
+commit c6120c2
+Author: tony spencer <notsleepy@53678.no-reply.drupal.org>
+Date:   Sat Dec 15 15:53:30 2007 +0000
+
+    Initial commit of Image Picker module. For more info on this module see: http://www.tonyspencer.com/2007/08/15/finally-a-good-image-upload-module-for-drupal/
+
+.htaccess
+imagepicker.css
+imagepicker.info
+imagepicker.install
+imagepicker.module
+imagepicker.tpl.php
+readme.txt

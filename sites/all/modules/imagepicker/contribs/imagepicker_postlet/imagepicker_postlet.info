@@ -1,0 +1,12 @@
+name = Imagepicker Postlet multi uploader
+description = Uploads images using Postlet java applet.
+package = Other
+core = 6.x
+dependencies[] = imagepicker
+
+; Information added by drupal.org packaging script on 2011-10-07
+version = "6.x-2.16"
+core = "6.x"
+project = "imagepicker"
+datestamp = "1318002404"
+

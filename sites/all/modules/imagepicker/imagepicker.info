@@ -1,0 +1,11 @@
+name = Imagepicker
+description = Upload, browse and add images to your nodes.
+package = Other
+core = 6.x
+
+; Information added by drupal.org packaging script on 2011-10-07
+version = "6.x-2.16"
+core = "6.x"
+project = "imagepicker"
+datestamp = "1318002404"
+
